@@ -7,6 +7,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Driver;
 using Models;
 using System.Configuration;
+using System.Web.Management;
 
 namespace DataAccess
 {
@@ -17,7 +18,9 @@ namespace DataAccess
             var modelExercises = new List<Exercise>();
 
             var mongoConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
+            new LogEvent(string.Format("Mongolab {0}",mongoConnectionString));
             var login = ConfigurationManager.AppSettings["login"].ToString();
+            new LogEvent(string.Format("Email substring {0}", login));
             var password = ConfigurationManager.AppSettings["password"].ToString();
             MongoServer mongo = MongoServer.Create(mongoConnectionString);
             MongoCredentials mc = new MongoCredentials(login,password);
@@ -28,12 +31,22 @@ namespace DataAccess
 
             mongo.Disconnect();
 
+           
+
             foreach (var exercise in exercises)
             {
                 modelExercises.Add(Maps.Map(exercise));
             }
 
             return modelExercises;
+        }
+
+        public class LogEvent : WebRequestErrorEvent
+        {
+            public LogEvent(string message)
+                : base(null, null, 100001, new Exception(message))
+            {
+            }
         }
     }
 }
