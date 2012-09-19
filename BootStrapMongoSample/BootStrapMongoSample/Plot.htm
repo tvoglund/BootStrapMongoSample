@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Highcharts Example</title>
+        <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+		    $(function () {
+		        var chart;
+		        $(document).ready(function () {
+		            //get my data for chart
+
+
+		            function GetChart(results) {
+
+		                chart = new Highcharts.Chart({
+		                    chart: {
+		                        renderTo: 'container',
+		                        plotBackgroundColor: null,
+		                        plotBorderWidth: null,
+		                        plotShadow: false
+		                    },
+		                    title: {
+		                        text: 'Workout by Muscle Group'
+		                    },
+		                    tooltip: {
+		                        pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+		                        percentageDecimals: 2
+		                    },
+		                    plotOptions: {
+		                        pie: {
+		                            allowPointSelect: true,
+		                            cursor: 'pointer',
+		                            dataLabels: {
+		                                enabled: true,
+		                                color: '#000000',
+		                                connectorColor: '#000000',
+		                                formatter: function () {
+		                                    return '<b>' + this.point.name + '</b>: ' + Highcharts.numberFormat(this.y, 2) + ' %';
+		                                }
+		                            }
+		                        }
+		                    },
+		                    series: [{
+		                        type: 'pie',
+		                        name: 'Browser share',
+		                        data: results
+		                    }]
+		                });
+
+		            }
+
+
+		            function getData() {
+		                $.ajax({
+		                    type: 'GET',
+		                    url: "http://localhost/Personal/Services/Records.svc/Exercises/ForGraph/test",
+		                    success: function (result) { 
+		                        GetChart(result);
+		                    },
+		                    error: function (err) {
+		                        alert(err);
+		                    }
+		                });
+		            }
+
+		            getData();
+		        });
+		    });
+                        
+		</script>
+	</head>
+	<body>
+        <script src="Scripts/highcharts.js" type="text/javascript"></script>
+                <script src="Scripts/exporting.js" type="text/javascript"></script>
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>
