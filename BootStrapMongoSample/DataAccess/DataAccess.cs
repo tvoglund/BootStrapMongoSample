@@ -18,9 +18,9 @@ namespace DataAccess
             var modelExercises = new List<Exercise>();
 
             var mongoConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
-            new LogEvent(string.Format("Mongolab {0}",mongoConnectionString));
+            new LogEvent(string.Format("Mongolab {0}",mongoConnectionString)).Raise();
             var login = ConfigurationManager.AppSettings["login"].ToString();
-            new LogEvent(string.Format("Email substring {0}", login));
+            new LogEvent(string.Format("Email substring {0}", login)).Raise();
             var password = ConfigurationManager.AppSettings["password"].ToString();
             MongoServer mongo = MongoServer.Create(mongoConnectionString);
             MongoCredentials mc = new MongoCredentials(login,password);
