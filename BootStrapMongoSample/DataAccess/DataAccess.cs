@@ -20,8 +20,8 @@ namespace DataAccess
             //var workout = mongo.GetDatabase("workout");
             //below is for mongolab
             //mongodb://appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6:lhf6utmuo44u29fv66353pd4q5@ds037607-a.mongolab.com:37607/appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6
-            MongoServer mongo = MongoServer.Create("mongodb://appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6:lhf6utmuo44u29fv66353pd4q5@ds037607-a.mongolab.com:37607/appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6");
-            MongoCredentials mc = new MongoCredentials("tvoglund", "Bela%Kavi_1");
+            MongoServer mongo = MongoServer.Create("mongolabconnectionstring");
+            MongoCredentials mc = new MongoCredentials("login", "password");
             var workout = mongo.GetDatabase("appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6", mc);
             //end of monglab
             var exerciseCollection = workout.GetCollection("exercise");
