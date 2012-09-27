@@ -3,3 +3,8 @@ C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\bin\BootS
 C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\BootStrapMongoSample.dll
 C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\BootStrapMongoSample.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\bin\BootStrapMongoSample.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\bin\BootStrapMongoSample.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\BootStrapMongoSample.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\BootStrapMongoSample.pdb

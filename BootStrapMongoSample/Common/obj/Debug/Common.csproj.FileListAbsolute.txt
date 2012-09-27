@@ -11,3 +11,16 @@ C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\Common\bin\Debug\Utilities.pdb
 C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\Common\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\Common\obj\Debug\Common.dll
 C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\Common\obj\Debug\Common.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\Common.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\Common.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\DataAccess.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\Models.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\MongoDB.Bson.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\MongoDB.Driver.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\Utilities.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\DataAccess.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\Models.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Debug\Utilities.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\obj\Debug\Common.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\obj\Debug\Common.pdb
