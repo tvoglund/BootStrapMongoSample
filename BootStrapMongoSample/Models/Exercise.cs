@@ -17,7 +17,7 @@ namespace Models
         public string date { get; set; }
         
         [DataMember]
-        public int set { get; set; }
+        public int setNumber { get; set; }
         
         [DataMember]
         public string weight { get; set; }
@@ -27,5 +27,8 @@ namespace Models
 
         [DataMember]
         public string type { get; set; }
+
+        [DataMember]
+        public string Id { get; set; }
     }
 }

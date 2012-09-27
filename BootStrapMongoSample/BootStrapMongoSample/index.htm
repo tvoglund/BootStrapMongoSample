@@ -1,5 +1,4 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -16,23 +15,81 @@
       }
     </style>
     <link href="Styles/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="Scripts/handlebars.1.0.rc.1.js" type="text/javascript"></script>
+    <script src="Scripts/ember.v1.0.pre.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-bbq-1.3pre.js" type="text/javascript"></script>
+    <script src="js/flexigrid.js" type="text/javascript"></script>
+    <!--below is js for each view (template) type -->
+    <script src="Scripts/index.js" type="text/javascript"></script>
+    <script src="Scripts/exercises.js" type="text/javascript"></script>
+      <script src="Scripts/app.js" type="text/javascript"></script>
 
+    <script type="text/x-handlebars" data-template-name="index-template">
+        <!-- Main hero unit for a primary marketing message or call to action -->
+        <div class="hero-unit">
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--    [if lt IE 9]
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    [endif]-->
+        <!-- Example row of columns -->
+        <div class="row">
+        <div class="span4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        </div>
 
-    <!-- Le fav and touch icons -->
-   <!-- <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+        <hr>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="exercises-detail-template">
+        <div id="exercises-details">
+        <label>Name: </label>{{view Ember.TextField valueBinding="name"}}
+        <label>Set: </label>{{view Ember.TextField valueBinding="setNum"}}
+        <label>Weight: </label>{{view Ember.TextField valueBinding="weight"}}
+        <label>Repititions: </label>{{view Ember.TextField valueBinding="reps"}}
+        <label>Muscle Group: </label>{{view Ember.TextField valueBinding="muscleGroup"}}
+        </br>
+        <button id="createNew" type="button" class="btn" onclick="CallRestSevicePut()">New</button>
+        
+        </div>
+        <hr>
+    </script>
+  
+    <script type="text/x-handlebars" data-template-name="exercises-template">
+        <button id="createNewRecord" type="button" class="btn" onclick="newExercise()">Create</button>
+        <hr>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="about-template">
+        <h1>About Me...</h1>
+      <p>Family, basketball, mathematics, fun, that is the order of things I enjoy.</p>
+      <hr>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="contact-template">
+        <h1>Contact Information</h1>
+      <p>tvoglund@hotmail.com</p>
+      <hr>
+    </script>
+
   </head>
 
   <body>
-
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -44,77 +101,127 @@
           <a class="brand" href="#">Truby Voglund</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="./index.htm">Home</a></li>
-              <li><a href="./About.htm">About</a></li>
-              <li><a href="./contact.htm">Contact</a></li>
+              <li class="active" id="homeId"><a href="#">Home</a></li>
+              <li><a href="#exercises" id="exercisesId">Exercises</a></li>
+              <li><a href="#about" id="aboutId">About</a></li>
+              <li><a href="#contact" id="contactId">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
-
-    <div class="container">
-
-     
-
+    <div class="container" id="containerId">
       <div id="flexigrid"></div>
+      <br />
     </div> <!-- /container -->
+    <footer>
+        <p>&copy; Suddha Software LLC. 2012</p>
+    </footer>
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-<!--    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap-transition.js"></script>
-    <script src="../assets/js/bootstrap-alert.js"></script>
-    <script src="../assets/js/bootstrap-modal.js"></script>
-    <script src="../assets/js/bootstrap-dropdown.js"></script>
-    <script src="../assets/js/bootstrap-scrollspy.js"></script>
-    <script src="../assets/js/bootstrap-tab.js"></script>
-    <script src="../assets/js/bootstrap-tooltip.js"></script>
-    <script src="../assets/js/bootstrap-popover.js"></script>
-    <script src="../assets/js/bootstrap-button.js"></script>
-    <script src="../assets/js/bootstrap-collapse.js"></script>
-    <script src="../assets/js/bootstrap-carousel.js"></script>
-    <script src="../assets/js/bootstrap-typeahead.js"></script>-->
-      <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
-      <script src="Scripts/bootstrap.min.js" type="text/javascript"></script>
-      <script src="js/flexigrid.js" type="text/javascript"></script>
+
         <script type="text/javascript" language="javascript">
-            var workUrl = 'http://localhost/Personal/Services/Records.svc/Exercises/Flexigrid/filter1';
-            var homeUrl = '';
+            //this works loadExercisesTable();
+            var indexView = Em.View.create({
+                templateName: 'index-template'
+            });
+
+            var exerciseView = Em.View.create({
+                templateName: 'exercises-template'
+            });
+
+            Workout.exercise = Ember.Object.create({
+                name: "Barack",
+                setNumber: 1,
+                repetitions: 10,
+                weight: "3",
+                type: "Back"
+            });
+
+
+            var exerciseDetailView = Em.View.create({
+                templateName: 'exercises-detail-template',
+                name: Workout.exercise.name,
+                setNum: Workout.exercise.setNum,
+                weight: Workout.exercise.weight,
+                reps: Workout.exercise.reps,
+                muscleGroup: Workout.exercise.muscleGroup
+            });
+
+            var contactView = Em.View.create({
+                templateName: 'contact-template'
+            });
+
+            var aboutView = Em.View.create({
+                templateName: 'about-template'
+            });
+
+
+            function newExercise() {
+                exerciseView.remove();
+                $(".flexigrid").hide();
+                exerciseDetailView.appendTo($("#containerId"));
+            }
+
+            function CallRestSevicePut() {
+                alert('created');
+                exerciseDetailView.remove();
+                $(".flexigrid").show();
+                exerciseView.appendTo($("#containerId"));
+                loadExercisesTable();
+
+                createExercise(Workout.exercise);
+                udpateExercise(Workout.exercise);
+                deleteExercise("31");
+            }
+
+            function IsHidden(element) {
+                return $(element).is(":visible");
+            }
+
             $(document).ready(function () {
-                $("#flexigrid").flexigrid({
-                    url: workUrl,
-                    method: 'GET',
-                    dataType: 'json',
-                    colModel: [
-                        { display: 'Date', name: 'date', width: 180, sortable: true, align: 'left' },
-		                { display: 'Name', name: 'name', width: 140, sortable: true, align: 'center' },
-                        { display: 'Set', name: 'set', width: 60, sortable: true, align: 'center' },
-                        { display: 'Weight', name: 'weight', width: 60, sortable: true, align: 'center' },
-		                { display: 'Reps', name: 'repetitions', width: 60, sortable: true, align: 'center' },
-                        { display: 'Muscle Group', name: 'type', width: 60, sortable: true, align: 'center' }
-		                ],
-                    //	                buttons : [
-                    //		                {name: 'Add', bclass: 'add', onpress : test},
-                    //		                {name: 'Delete', bclass: 'delete', onpress : test},
-                    //		                {separator: true}
-                    //		                ],
-                    searchitems: [
-		                { display: 'Name', name: 'name' },
-		                { display: 'Date', name: 'date', isdefault: true }
-		                ],
-                    sortname: "iso",
-                    sortorder: "asc",
-                    usepager: true,
-                    title: 'Workout Results',
-                    useRp: true,
-                    rp: 15,
-                    showTableToggleBtn: true,
-                    width: 700,
-                    height: 200
+
+                indexView.appendTo($("#containerId"));
+
+                $(window).hashchange(function () {
+                    //now in here just change out each content using ember.js
+                    //alert(location.hash);
+
+                    activeMenuItem(location.hash);
+                    if (location.hash == "#" || location.hash == "") {
+                        exerciseDetailView.remove();
+                        exerciseView.remove();
+                        contactView.remove();
+                        aboutView.remove();
+                        $(".flexigrid").hide();
+                        indexView.appendTo($("#containerId"));
+                    } 
+                    else if (location.hash == "#exercises") {
+                        indexView.remove();
+                        exerciseDetailView.remove();
+                        contactView.remove();
+                        aboutView.remove();
+                        $(".flexigrid").show();
+                        exerciseView.appendTo($("#containerId"));
+                        loadExercisesTable();
+                    }
+                     else if (location.hash == "#about") {
+                        indexView.remove();
+                        exerciseView.remove();
+                        exerciseDetailView.remove();
+                        contactView.remove();
+                        $(".flexigrid").hide();
+                        aboutView.appendTo($("#containerId"));
+                    }
+                    else if (location.hash == "#contact") {
+                        indexView.remove();
+                        exerciseView.remove();
+                        exerciseDetailView.remove();
+                        aboutView.remove();
+                        $(".flexigrid").hide();
+                        contactView.appendTo($("#containerId"));
+                    }
                 });
-            });  
+            });
         </script>
   </body>
 </html>

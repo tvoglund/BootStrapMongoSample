@@ -5,12 +5,14 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using Models;
+using Common;
 
 namespace Services
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Records" in code, svc and config file together.
     public class Records : IRecords
     {
+        #region Get methods
         public FlexigridObject DoWork()
         {
             FlexigridObject fo = new FlexigridObject();
@@ -51,5 +53,33 @@ namespace Services
             
             return gc.GetAllExercisesForGraph(graphType);
         }
+        #endregion
+
+        #region Post methods
+        public CreateResponse CreateExercise(Exercise exercise)
+        {
+            CreateResponse cr = new CreateResponse();
+
+            return cr;
+        }
+        #endregion
+
+        #region Put methods
+        public UpdateResponse UpdateExercise(Exercise exercise)
+        {
+            var cr = new UpdateResponse();
+
+            return cr;
+        }
+        #endregion
+
+        #region Delete methods
+        public DeleteResponse DeleteExercise(string id)
+        {
+            var cr = new DeleteResponse();
+
+            return cr;
+        }
+        #endregion
     }
 }

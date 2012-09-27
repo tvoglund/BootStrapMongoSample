@@ -7,7 +7,7 @@ var Workout = Em.Application.create({
     organizer: 'Andy',
     totalReviews: 0,
     ready: function () {
-        alert('Ember sucks');
+        //alert('Ember sucks');
     }
 });
 
@@ -18,7 +18,7 @@ var Workout = Em.Application.create({
 Workout.Exercise = Em.Object.extend({
     date: null,
     name: null,
-    set: 0,
+    setNumber: 0,
     weight: null,
     repetitions: 0,
     type: null

@@ -13,7 +13,8 @@ namespace DataAccess
         {
             Exercise exOut = new Exercise();
             exOut = Mapper.Map<ExerciseInternal, Exercise>(exerciseIn);
-
+            exOut.setNumber = exerciseIn.set;  //note this is setNumber because set is used in ember.js
+            exOut.Id = exerciseIn.Id.ToString();
             return exOut;
         }
     }

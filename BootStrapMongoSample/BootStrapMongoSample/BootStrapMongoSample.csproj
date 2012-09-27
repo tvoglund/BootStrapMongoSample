@@ -80,15 +80,23 @@
     <Content Include="Scripts\ember.v1.0.pre.js" />
     <Content Include="js\flexigrid.js" />
     <Content Include="js\flexigrid.pack.js" />
+    <Content Include="Scripts\exercises.js" />
     <Content Include="Scripts\exporting.js" />
     <Content Include="Scripts\handlebars.1.0.rc.1.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\highcharts.js" />
+    <Content Include="Scripts\index.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-bbq-1.3pre.js" />
     <Content Include="Styles\bootstrap-responsive.min.css" />
     <Content Include="Styles\bootstrap.min.css" />
     <Content Include="Styles\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Views\About.js" />
+    <Content Include="Views\Contact.js" />
+    <Content Include="Views\Exercises.js" />
+    <Content Include="Views\Home.js" />
+    <Content Include="Views\Plot.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

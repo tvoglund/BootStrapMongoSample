@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using System.ServiceModel.Web;
 using Models;
+using Common;
 
 namespace Services
 {
@@ -25,9 +26,20 @@ namespace Services
         [WebGet(UriTemplate = "/Exercises", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         List<Exercise> GetAllExercises();
 
-
         [OperationContract]
         [WebGet(UriTemplate = "/Exercises/ForGraph/{graphType}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         List<PieResponse> GetRecordsForGraph(string graphType);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/Exercise", Method = "POST", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        CreateResponse CreateExercise(Exercise exercise);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/Exercise", Method = "PUT", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        UpdateResponse UpdateExercise(Exercise exercise);
+
+        [OperationContract]
+        [WebInvoke(UriTemplate = "/Exercise/{id}", Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        DeleteResponse DeleteExercise(string id);
     }
 }

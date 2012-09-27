@@ -1,0 +1,5 @@
+C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\bin\BootStrapMongoSample.dll
+C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\bin\BootStrapMongoSample.pdb
+C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\BootStrapMongoSample.dll
+C:\Projects\CPD_IAS-PRS_2004\BootStrapMongoSample\BootStrapMongoSample\obj\Debug\BootStrapMongoSample.pdb
