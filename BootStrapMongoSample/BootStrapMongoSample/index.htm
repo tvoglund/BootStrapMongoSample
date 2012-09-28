@@ -70,8 +70,17 @@
         <hr>
     </script>
   
+     <script type="text/x-handlebars" data-template-name="alert-template">
+        <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">×</button>
+            <h4>Error!</h4>
+            <p id="errorMessageId">{{message}}</p>
+        </div>
+    </script>
+
     <script type="text/x-handlebars" data-template-name="exercises-template">
         <button id="createNewRecord" type="button" class="btn" onclick="newExercise()">Create</button>
+        <button id="editRecord" type="button" class="btn" onclick="editExercise()">Edit</button>
         <hr>
     </script>
 

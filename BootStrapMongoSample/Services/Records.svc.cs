@@ -53,6 +53,23 @@ namespace Services
             
             return gc.GetAllExercisesForGraph(graphType);
         }
+
+        public GeneralResponse CheckDetails(string password)
+        {
+            GeneralResponse gr = new GeneralResponse();
+            gr.IsSuccess = false;
+            if (password == "truby")
+            {
+                Common.GetCollections gc = new GetCollections();
+                gr = gc.GetDetails(password);
+            }
+            else
+            {
+                gr.Message = "Password is incorrect!!!";
+            }
+
+            return gr;
+        }
         #endregion
 
         #region Post methods

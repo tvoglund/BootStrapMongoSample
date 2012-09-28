@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using DataAccess;
 using Models;
+using System.Configuration;
 
 namespace Common
 {
@@ -47,6 +48,29 @@ namespace Common
             }
 
             return returnData;
+        }
+
+        public GeneralResponse GetDetails(string password)
+        {
+            var gr = new GeneralResponse();
+            gr.IsSuccess = false;
+
+            try
+            {
+                var mongoConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
+                var login = ConfigurationManager.AppSettings["login"].ToString();
+                var passWord = ConfigurationManager.AppSettings["password"].ToString();
+
+                gr.Message = string.Format("MONGOLAB_URI:  {0}{1}login:  {2}{1}", mongoConnectionString, Environment.NewLine, login);
+                gr.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                gr.Message = ex.Message;
+                gr.IsSuccess = false;
+            }
+
+            return gr;
         }
 
     }

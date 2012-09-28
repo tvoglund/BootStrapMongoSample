@@ -30,6 +30,10 @@ namespace DataAccess
                 new LogEvent(string.Format("mongolab_uri:  {0}{1}login:  {2}{1}password{3}{1}", mongoConnectionString, Environment.NewLine, login, password)).Raise();    
 
 
+
+
+
+
                 var workout = mongo.GetDatabase("appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6", mc);
                 //end of monglab
                 var exerciseCollection = workout.GetCollection("exercise");
