@@ -1,4 +1,5 @@
-﻿var sBaseUrl = "http://localhost/Personal/BootStrapMongoSample/";
+﻿//var sBaseUrl = "http://localhost/Personal/BootStrapMongoSample/";
+var sBaseUrl = "http://personal-4.apphb.com/";
 
 function activeMenuItem(id) {
 
