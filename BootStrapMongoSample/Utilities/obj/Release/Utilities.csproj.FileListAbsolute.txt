@@ -1,0 +1,5 @@
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\bin\Release\Utilities.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\bin\Release\Utilities.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\obj\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\obj\Release\Utilities.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\obj\Release\Utilities.pdb
