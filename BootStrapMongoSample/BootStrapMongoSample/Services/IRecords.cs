@@ -41,9 +41,5 @@ namespace Services
         [OperationContract]
         [WebInvoke(UriTemplate = "/Exercise/{id}", Method = "DELETE", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         DeleteResponse DeleteExercise(string id);
-
-        [OperationContract]
-        [WebGet(UriTemplate = "/Health/{password}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        GeneralResponse CheckDetails(string password);
     }
 }
