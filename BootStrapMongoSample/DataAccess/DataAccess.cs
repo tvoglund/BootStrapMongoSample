@@ -28,6 +28,10 @@ namespace DataAccess
                 MongoCredentials mc = new MongoCredentials(login, password);
 
 
+                
+
+
+
                 var workout = mongo.GetDatabase("appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6", mc);
                 //end of monglab
                 var exerciseCollection = workout.GetCollection("exercise");
