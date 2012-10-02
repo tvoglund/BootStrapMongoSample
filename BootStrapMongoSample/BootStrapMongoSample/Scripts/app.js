@@ -37,7 +37,7 @@ Workout.workoutController = Em.ArrayController.create({
     init: function () {
         $.ajax({
             type: 'GET',
-            url: "http://localhost/Personal/Services/Records.svc/Exercises",
+            url: sBaseUrl + "Services/Records.svc/Exercises",
             success: function (result) {
                 processThis(result);
             },

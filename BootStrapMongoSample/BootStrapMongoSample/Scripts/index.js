@@ -1,4 +1,6 @@
-﻿function activeMenuItem(id) {
+﻿var sBaseUrl = "http://localhost/Personal/BootStrapMongoSample/";
+
+function activeMenuItem(id) {
 
     //dynamically get menu here
     var h = {};

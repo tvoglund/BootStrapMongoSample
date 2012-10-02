@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BootStrapMongoSample", "BootStrapMongoSample\BootStrapMongoSample.csproj", "{3DE9F8B1-5194-45F0-8A4E-44348143C6D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{37F2B449-9185-4797-A20C-86E026D28622}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{23AD7946-00D3-49AC-8D63-BB92D85DA435}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F00405D-0074-4CF6-B2DD-E9F87F95DBD0}"
@@ -33,10 +31,6 @@ Global
 		{3DE9F8B1-5194-45F0-8A4E-44348143C6D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE9F8B1-5194-45F0-8A4E-44348143C6D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE9F8B1-5194-45F0-8A4E-44348143C6D7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{37F2B449-9185-4797-A20C-86E026D28622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{37F2B449-9185-4797-A20C-86E026D28622}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{37F2B449-9185-4797-A20C-86E026D28622}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{37F2B449-9185-4797-A20C-86E026D28622}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23AD7946-00D3-49AC-8D63-BB92D85DA435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23AD7946-00D3-49AC-8D63-BB92D85DA435}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23AD7946-00D3-49AC-8D63-BB92D85DA435}.Release|Any CPU.ActiveCfg = Release|Any CPU

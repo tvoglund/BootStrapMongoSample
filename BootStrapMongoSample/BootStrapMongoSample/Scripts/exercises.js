@@ -1,7 +1,7 @@
 ﻿function loadExercisesTable() 
 {
 
-    var workUrl = 'http://localhost/Personal/Services/Records.svc/Exercises/Flexigrid/filter1';
+    var workUrl = sBaseUrl + 'Services/Records.svc/Exercises/Flexigrid/filter1';
     var homeUrl = '';
 
     $("#flexigrid").flexigrid({
@@ -79,7 +79,7 @@ function createExercise(exercise)
 
     $.ajax({
         type: 'POST',
-        url: "http://localhost/Personal/Services/Records.svc/Exercise",
+        url: sBaseUrl + "Services/Records.svc/Exercise",
         dataType: 'json',
         contentType: "application/json; charset=utf-8",
         data: input,
@@ -99,7 +99,7 @@ function udpateExercise(exercise) {
 
     $.ajax({
             type: 'PUT',
-            url: "http://localhost/Personal/Services/Records.svc/Exercise",
+            url: sBaseUrl + "Services/Records.svc/Exercise",
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
             data: input,
@@ -119,7 +119,7 @@ function udpateExercise(exercise) {
 
         $.ajax({
             type: 'DELETE',
-            url: "http://localhost/Personal/Services/Records.svc/Exercise/" + id,
+            url: sBaseUrl + "Services/Records.svc/Exercise/" + id,
             success: function (result) {
                 alert('success');
                 //processThis(result);

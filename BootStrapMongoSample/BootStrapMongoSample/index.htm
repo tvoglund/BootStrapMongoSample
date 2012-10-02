@@ -189,6 +189,7 @@
 
             $(document).ready(function () {
 
+                
                 indexView.appendTo($("#containerId"));
 
                 $(window).hashchange(function () {
@@ -203,7 +204,7 @@
                         aboutView.remove();
                         $(".flexigrid").hide();
                         indexView.appendTo($("#containerId"));
-                    } 
+                    }
                     else if (location.hash == "#exercises") {
                         indexView.remove();
                         exerciseDetailView.remove();
@@ -213,7 +214,7 @@
                         exerciseView.appendTo($("#containerId"));
                         loadExercisesTable();
                     }
-                     else if (location.hash == "#about") {
+                    else if (location.hash == "#about") {
                         indexView.remove();
                         exerciseView.remove();
                         exerciseDetailView.remove();

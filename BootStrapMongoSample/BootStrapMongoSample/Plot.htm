@@ -99,7 +99,7 @@
 		            function getDataPopPieChart() {
 		                $.ajax({
 		                    type: 'GET',
-		                    url: "http://localhost/Personal/Services/Records.svc/Exercises/ForGraph/test",
+		                    url: sBaseUrl + "Services/Records.svc/Exercises/ForGraph/test",
 		                    success: function (result) {
 		                        GetChart(result);
 		                    },
@@ -112,7 +112,7 @@
 		            function getDataCheckChart() {
 		                $.ajax({
 		                    type: 'GET',
-		                    url: "http://localhost/Personal/Services/Records.svc/Health/" + $("#takeAGuessId").val(),
+		                    url: sBaseUrl + "Services/Records.svc/Health/" + $("#takeAGuessId").val(),
 		                    success: function (result) {
 		                        alert(result.Message);
 		                    },
