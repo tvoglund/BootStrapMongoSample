@@ -54,8 +54,6 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.htm" />
-    <Content Include="contact.htm" />
     <Content Include="css\flexigrid.css" />
     <Content Include="css\flexigrid.pack.css" />
     <Content Include="css\images\bg.gif" />

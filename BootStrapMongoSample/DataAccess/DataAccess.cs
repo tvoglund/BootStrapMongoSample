@@ -14,29 +14,39 @@ namespace DataAccess
 {
     public class DataAccess
     {
+        public string DbConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
+        public string DbLogin = ConfigurationManager.AppSettings["login"].ToString();
+        public string DbPassword = ConfigurationManager.AppSettings["password"].ToString();
+        public string DbName = ConfigurationManager.AppSettings["database"].ToString();
+
+
+
+        public string DbLocation = "Cloud";
+        public string CreatePassword = "aa4520c2-ca79-4757-be8a-59277c5a2b3e";
+
         public List<Exercise> GetExerciseCollection()
         {
             var modelExercises = new List<Exercise>();
 
+            MongoServer mongo = MongoServer.Create(DbConnectionString);
             try
             {
+                MongoDatabase database = null;
 
-                var mongoConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
-                var login = ConfigurationManager.AppSettings["login"].ToString();
-                var password = ConfigurationManager.AppSettings["password"].ToString();
-                MongoServer mongo = MongoServer.Create(mongoConnectionString);
-                MongoCredentials mc = new MongoCredentials(login, password);
+                if (DbLocation.Equals("Local"))
+                {
+                    database = mongo.GetDatabase("workout");
+                }
+                else
+                {
+                    //below is for mongolab
+                    MongoCredentials mc = new MongoCredentials(DbLogin, DbPassword);
+                    database = mongo.GetDatabase(DbName, mc);
+                    //end of monglab
+                }
 
-
-
-
-                var workout = mongo.GetDatabase("appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6", mc);
-                //end of monglab
-                var exerciseCollection = workout.GetCollection("exercise");
-                var exercises = workout.GetCollection("exercise").FindAllAs<ExerciseInternal>().ToList();
-
-                mongo.Disconnect();
-
+                var exerciseCollection = database.GetCollection("exercise");
+                var exercises = database.GetCollection("exercise").FindAllAs<ExerciseInternal>().ToList();
                 foreach (var exercise in exercises)
                 {
                     modelExercises.Add(Maps.Map(exercise));
@@ -46,8 +56,55 @@ namespace DataAccess
             {
                 throw (ex);
             }
+            finally
+            {
+                mongo.Disconnect();
+            }
 
             return modelExercises;
+        }
+
+        public Exercise CreateExerciseCollection(Exercise exercise)
+        {
+            var exerciseResponse = new Exercise();
+
+            if (exercise.CreatePassword == CreatePassword)
+            {
+
+                MongoServer mongo = MongoServer.Create(DbConnectionString);
+                try
+                {
+                    MongoDatabase database = null;
+
+                    if (DbLocation.Equals("Local"))
+                    {
+                        database = mongo.GetDatabase("workout");
+                    }
+                    else
+                    {
+                        //below is for mongolab
+                        MongoCredentials mc = new MongoCredentials(DbLogin, DbPassword);
+                        database = mongo.GetDatabase(DbName, mc);
+                        //end of monglab
+                    }
+
+                    MongoCollection<ExerciseInternal> exercises = database.GetCollection<ExerciseInternal>("exercise");
+                    var exerciseInternal = new ExerciseInternal();
+                    exerciseInternal = Maps.Map(exercise);
+                    //var result = exercises.Insert(exerciseInternal);
+                }
+                catch (Exception ex)
+                {
+                    //TODO:  Add some logging...
+                }
+                finally
+                {
+                    mongo.Disconnect();
+                }
+            }
+
+
+            return exercise;
         }
 
         public class LogEvent : WebRequestErrorEvent

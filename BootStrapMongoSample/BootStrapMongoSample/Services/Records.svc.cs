@@ -77,6 +77,9 @@ namespace Services
         {
             CreateResponse cr = new CreateResponse();
 
+            Common.Collections coll = new Collections();
+            cr = coll.CreateExercise(exercise);
+
             return cr;
         }
         #endregion

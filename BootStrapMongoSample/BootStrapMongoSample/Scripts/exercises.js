@@ -60,22 +60,7 @@ function editExercise() {
 
 function createExercise(exercise) 
 {
-    var input =
-        {
-            "exercise":
-            {
-                "name": exercise.name,
-                "set": exercise.setNum
-            }
-        };
-
-    input = JSON.stringify(exercise);
-
-    //This works!!!
-    //        input = JSON.stringify({
-    //            "name": exercise.name,
-    //            "set": exercise.setNum
-    //        });
+    var input = JSON.stringify(exercise);
 
     $.ajax({
         type: 'POST',
@@ -84,7 +69,7 @@ function createExercise(exercise)
         contentType: "application/json; charset=utf-8",
         data: input,
         success: function (result) {
-            alert('success');
+            //Need to update the flexigrid....
             //processThis(result);
         },
         error: function (err) {
@@ -95,7 +80,7 @@ function createExercise(exercise)
 
 function udpateExercise(exercise) {
     
-        input = JSON.stringify(exercise);
+   input = JSON.stringify(exercise);
 
     $.ajax({
             type: 'PUT',

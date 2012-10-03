@@ -17,5 +17,13 @@ namespace DataAccess
             exOut.Id = exerciseIn.Id.ToString();
             return exOut;
         }
+
+        internal static ExerciseInternal Map(Exercise exerciseIn)
+        {
+            ExerciseInternal exOut = new ExerciseInternal();
+            exOut = Mapper.Map<Exercise, ExerciseInternal>(exerciseIn);
+            exOut.set = exerciseIn.setNumber;
+            return exOut;
+        }
     }
 }

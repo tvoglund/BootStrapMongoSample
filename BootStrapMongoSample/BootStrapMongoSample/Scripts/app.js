@@ -21,7 +21,8 @@ Workout.Exercise = Em.Object.extend({
     setNumber: 0,
     weight: null,
     repetitions: 0,
-    type: null
+    type: null,
+    CreatePassword: null
 });
 
 /**************************
