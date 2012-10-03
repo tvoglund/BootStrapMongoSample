@@ -14,11 +14,14 @@ namespace DataAccess
 {
     public class DataAccess
     {
-        public string DbConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
-        public string DbLogin = ConfigurationManager.AppSettings["login"].ToString();
-        public string DbPassword = ConfigurationManager.AppSettings["password"].ToString();
-        public string DbName = ConfigurationManager.AppSettings["database"].ToString();
-
+        //public string DbConnectionString = ConfigurationManager.AppSettings["MONGOLAB_URI"].ToString();
+        //public string DbLogin = ConfigurationManager.AppSettings["login"].ToString();
+        //public string DbPassword = ConfigurationManager.AppSettings["password"].ToString();
+        //public string DbName = ConfigurationManager.AppSettings["database"].ToString();
+        public string DbConnectionString = "mongodb://appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6:lhf6utmuo44u29fv66353pd4q5@ds037607-a.mongolab.com:37607/appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6";
+        public string DbLogin = "tvoglund";
+        public string DbPassword = "Bela%Kavi_1";
+        public string DbName = "appharbor_bc09b46d-eeb1-4970-b1dc-0a0774e058d6";
 
 
         public string DbLocation = "Cloud";

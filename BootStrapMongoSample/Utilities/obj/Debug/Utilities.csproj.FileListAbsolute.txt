@@ -8,3 +8,8 @@ C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\bin\Debug\Utilities.
 C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\obj\Debug\Utilities.dll
 C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Utilities\obj\Debug\Utilities.pdb
+C:\Projects\Git\BootStrapMongoSample\Utilities\bin\Debug\Utilities.dll
+C:\Projects\Git\BootStrapMongoSample\Utilities\bin\Debug\Utilities.pdb
+C:\Projects\Git\BootStrapMongoSample\Utilities\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Git\BootStrapMongoSample\Utilities\obj\Debug\Utilities.dll
+C:\Projects\Git\BootStrapMongoSample\Utilities\obj\Debug\Utilities.pdb

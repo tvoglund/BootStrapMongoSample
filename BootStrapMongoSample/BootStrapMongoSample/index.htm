@@ -58,12 +58,12 @@
 
     <script type="text/x-handlebars" data-template-name="exercises-detail-template">
         <div id="exercises-details">
-        <label>Name: </label>{{view Ember.TextField valueBinding="name"}}
-        <label>Set: </label>{{view Ember.TextField valueBinding="setNumber"}}
-        <label>Weight: </label>{{view Ember.TextField valueBinding="weight"}}
-        <label>Repititions: </label>{{view Ember.TextField valueBinding="repetitions"}}
-        <label>Muscle Group: </label>{{view Ember.TextField valueBinding="type"}}
-        <label>Create Password: </label>{{view Ember.TextField valueBinding="CreatePassword"}}
+        <label>Name: </label>{{view Ember.TextField valueBinding="Workout.exercise.name"}}
+        <label>Set: </label>{{view Ember.TextField valueBinding="Workout.exercise.setNumber"}}
+        <label>Weight: </label>{{view Ember.TextField valueBinding="Workout.exercise.weight"}}
+        <label>Repititions: </label>{{view Ember.TextField valueBinding="Workout.exercise.repetitions"}}
+        <label>Muscle Group: </label>{{view Ember.TextField valueBinding="Workout.exercise.type"}}
+        <label>Create Password: </label>{{view Ember.TextField valueBinding="Workout.exercise.CreatePassword"}}
         </br>
         <button id="createNew" type="button" class="btn" onclick="CallRestSevicePut()">New</button>
         
