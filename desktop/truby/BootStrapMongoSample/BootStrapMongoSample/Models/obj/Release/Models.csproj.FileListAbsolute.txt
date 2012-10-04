@@ -1,5 +1,0 @@
-C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Models\bin\Release\Models.dll
-C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Models\bin\Release\Models.pdb
-C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Models\obj\Release\ResolveAssemblyReference.cache
-C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Models\obj\Release\Models.dll
-C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Models\obj\Release\Models.pdb
