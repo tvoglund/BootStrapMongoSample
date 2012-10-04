@@ -1,7 +1,7 @@
 ﻿function loadExercisesTable() 
 {
 
-    var workUrl = sBaseUrl + 'Services/Records.svc/Exercises/Flexigrid/filter1';
+    var workUrl = sBaseUrl + 'Services/Records.svc/Exercises/Flexigrid';
     var homeUrl = '';
 
     $("#flexigrid").flexigrid({
@@ -9,7 +9,7 @@
         method: 'GET',
         dataType: 'json',
         colModel: [
-                        { display: 'Id', name: 'Id', width: 60, sortable: true, align: 'center', hide: true },
+                        { display: 'Id', name: 'Id', width: 60, sortable: false, align: 'center', hide: true },
                         { display: 'Date', name: 'date', width: 180, sortable: true, align: 'left' },
 		                { display: 'Name', name: 'name', width: 140, sortable: true, align: 'center' },
                         { display: 'Set', name: 'setNumber', width: 60, sortable: true, align: 'center' },
@@ -17,16 +17,17 @@
 		                { display: 'Reps', name: 'repetitions', width: 60, sortable: true, align: 'center' },
                         { display: 'Muscle Group', name: 'type', width: 60, sortable: true, align: 'center' }
 		                ],
-        //	                buttons : [
-        //		                {name: 'Add', bclass: 'add', onpress : test},
-        //		                {name: 'Delete', bclass: 'delete', onpress : test},
-        //		                {separator: true}
-        //		                ],
+        	                buttons : [
+        		                {name: 'Add', bclass: 'add', onpress : newExercise},
+                                {name: 'Edit', bclass: 'add', onpress : editExercise},
+        		                {separator: true}
+        		                ],
         searchitems: [
-		                { display: 'Name', name: 'name' },
-		                { display: 'Date', name: 'date', isdefault: true }
+		                { display: 'Name', name: 'name', isdefault: true  },
+		                { display: 'Date', name: 'date' },
+                        { display: 'Muscle Group', name: 'type' }
 		                ],
-        sortname: "iso",
+        sortname: "date",
         sortorder: "asc",
         usepager: true,
         title: 'Workout Results',

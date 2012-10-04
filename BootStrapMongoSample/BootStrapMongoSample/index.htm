@@ -58,6 +58,7 @@
 
     <script type="text/x-handlebars" data-template-name="exercises-detail-template">
         <div id="exercises-details">
+        <label>Name: </label>{{view Ember.TextField valueBinding="Workout.exercise.Id"}}
         <label>Name: </label>{{view Ember.TextField valueBinding="Workout.exercise.name"}}
         <label>Set: </label>{{view Ember.TextField valueBinding="Workout.exercise.setNumber"}}
         <label>Weight: </label>{{view Ember.TextField valueBinding="Workout.exercise.weight"}}
@@ -142,11 +143,12 @@
                 templateName: 'index-template'
             });
 
-            var exerciseView = Em.View.create({
-                templateName: 'exercises-template'
-            });
+//            var exerciseView = Em.View.create({
+//                templateName: 'exercises-template'
+//            });
 
             Workout.exercise = Ember.Object.create({
+                Id: "",
                 name: "Barack",
                 setNumber: 1,
                 repetitions: 10,
@@ -175,7 +177,7 @@
 
 
             function newExercise() {
-                exerciseView.remove();
+                //exerciseView.remove();
                 $(".flexigrid").hide();
                 exerciseDetailView.appendTo($("#containerId"));
             }
@@ -184,7 +186,7 @@
                 //alert('created');
                 exerciseDetailView.remove();
                 $(".flexigrid").show();
-                exerciseView.appendTo($("#containerId"));
+                //exerciseView.appendTo($("#containerId"));
                 loadExercisesTable();
 
                 createExercise(Workout.exercise);
@@ -208,7 +210,7 @@
                     activeMenuItem(location.hash);
                     if (location.hash == "#" || location.hash == "") {
                         exerciseDetailView.remove();
-                        exerciseView.remove();
+                        //exerciseView.remove();
                         contactView.remove();
                         aboutView.remove();
                         $(".flexigrid").hide();
@@ -220,12 +222,12 @@
                         contactView.remove();
                         aboutView.remove();
                         $(".flexigrid").show();
-                        exerciseView.appendTo($("#containerId"));
+                        //exerciseView.appendTo($("#containerId"));
                         loadExercisesTable();
                     }
                     else if (location.hash == "#about") {
                         indexView.remove();
-                        exerciseView.remove();
+                        //exerciseView.remove();
                         exerciseDetailView.remove();
                         contactView.remove();
                         $(".flexigrid").hide();
@@ -233,7 +235,7 @@
                     }
                     else if (location.hash == "#contact") {
                         indexView.remove();
-                        exerciseView.remove();
+                        //exerciseView.remove();
                         exerciseDetailView.remove();
                         aboutView.remove();
                         $(".flexigrid").hide();

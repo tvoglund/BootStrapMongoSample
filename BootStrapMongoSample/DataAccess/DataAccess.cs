@@ -20,6 +20,9 @@ namespace DataAccess
         public string DbName = ConfigurationManager.AppSettings["database"].ToString();
 
 
+
+
+        
         public string DbLocation = "Cloud";
         public string CreatePassword = "aa4520c2-ca79-4757-be8a-59277c5a2b3e";
 

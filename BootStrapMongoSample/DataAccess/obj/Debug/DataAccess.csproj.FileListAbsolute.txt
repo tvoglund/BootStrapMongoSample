@@ -31,3 +31,14 @@ C:\Projects\Git\BootStrapMongoSample\DataAccess\bin\Utilities.pdb
 C:\Projects\Git\BootStrapMongoSample\DataAccess\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\Git\BootStrapMongoSample\DataAccess\obj\Debug\DataAccess.dll
 C:\Projects\Git\BootStrapMongoSample\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\DataAccess.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\DataAccess.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\Models.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\MongoDB.Bson.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\MongoDB.Driver.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\Utilities.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\Models.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\bin\Utilities.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\BootStrapMongoSample\DataAccess\obj\Debug\DataAccess.pdb

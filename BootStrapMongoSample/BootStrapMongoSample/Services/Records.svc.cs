@@ -33,7 +33,7 @@ namespace Services
             return gc.GetAllExercises();
         }
 
-        public FlexigridObject GetRecords(string filter)
+        public FlexigridObject GetRecords(string page, string rp, string sortname, string sortorder)
         {
             FlexigridObject fo = new FlexigridObject();
 

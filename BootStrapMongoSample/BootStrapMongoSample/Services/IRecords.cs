@@ -19,8 +19,8 @@ namespace Services
         FlexigridObject DoWork();
 
         [OperationContract]
-        [WebGet(UriTemplate = "Exercises/Flexigrid/{filter}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
-        FlexigridObject GetRecords(string filter);
+        [WebGet(UriTemplate = "Exercises/Flexigrid?page={page}&rp={rp}&sortname={sortname}&sortorder={sortorder}", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        FlexigridObject GetRecords(string page, string rp, string sortname, string sortorder);
 
         [OperationContract]
         [WebGet(UriTemplate = "/Exercises", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
