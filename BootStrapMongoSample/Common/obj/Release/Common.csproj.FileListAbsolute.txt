@@ -1,0 +1,13 @@
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\Common.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\Common.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\DataAccess.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\Models.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\MongoDB.Bson.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\MongoDB.Driver.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\Utilities.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\DataAccess.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\Models.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\bin\Release\Utilities.pdb
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\obj\Release\ResolveAssemblyReference.cache
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\obj\Release\Common.dll
+C:\Users\admin\Desktop\Truby\BootStrapMongoSample\Common\obj\Release\Common.pdb
